@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/ParMums.css">
+  <link rel="stylesheet" href="../css/Navigaacija.css">
+  <link rel="stylesheet" href="../css/TPTop.css">
+  <title>Par mums -FREDI Ziņas</title>
+</head>
+<body>
+
+
+<!-- NAVIGĀCIJA -->
+<input type="checkbox" id="nav-toggle" hidden>
+<label for="nav-toggle" class="nav-toggle-label">
+  <span></span><span></span><span></span>
+</label>
+
+<nav class="responsive-nav">
+  <div class="nav-left">
+    <a href="../html/Main.html" class="logo">Fredi</a>
+  </div>
+
+  <div class="nav-center">
+    <a href="../html/Main.html"><button>Home</button></a>
+
+    <!-- DROPDOWN SĀKUMS -->
+    <div class="dropdown">
+      <button class="dropbtn">Aktualitātes</button>
+      <div class="dropdown-content">
+        <a href="Aktualitates.html">Visas aktualitātes</a>
+        <a href="LaikaZinas.html">Laika ziņas</a>
+      </div>
+    </div>
+    <!-- DROPDOWN BEIGAS -->
+
+    <a href="404.html"><button>Tematiskie raksti</button></a>
+
+    <!-- DROPDOWN SĀKUMS -->
+    <div class="dropdown">
+      <button class="dropbtn">Kultūra un māksla</button>
+      <div class="dropdown-content">
+        <a href="Kultura.html">Viss par Kultūru un mākslu</a>
+        <a href="DziesmuSvetki_Raksts.html">Dziesmu un deju svētki</a>
+      </div>
+    </div>
+    <!-- DROPDOWN BEIGAS -->
+
+    <a href="ParMums.html"><button class="active">Par Mums</button></a>
+  </div>
+
+  <div class="nav-right">
+    <a href="Profils.html"><button>Profils</button></a>
+  </div>
+</nav>
+<!-- NAVIGĀCIJA -->
+  
+  
+  <section class="about-us">
+    <div class="about-container">
+      <h2>Par mums</h2>
+      <p class="intro">
+        Mēs esam neliela, bet dedzīga komanda, kas tic patiesām ziņām un to spēkam. Katrs raksts, ko publicējam, ir rūpīgi atlasīts, pārbaudīts un radīts ar cieņu pret lasītāju.
+      </p>
+  
+      <div class="about-details">
+        <div class="about-block">
+          <h3>Mūsu misija</h3>
+          <p>Radīt saturu, kas atver acis, rosināt domāt un iedvesmot uz rīcību. Mēs neliecamies reklāmas spiediena vai klikšķu vajadzības priekšā.</p>
+        </div>
+  
+        <div class="about-block">
+          <h3>Kas mēs esam</h3>
+          <p>Žurnālisti, domātāji, radošas dvēseles un tehnoloģiju entuziasti. Mūs vieno vēlme darīt nozīmīgu darbu digitālajā telpā.</p>
+        </div>
+      </div>
+    </div>
+    <div class="quote-box">
+        <p >
+            "Mēs ticam, ka ziņas spēj izmainīt pasauli – un mēs esam gatavi to darīt katru dienu."
+        </p>
+        <p class="intro" style="font-size: small;">- Komanda FREDI Ziņas</p>
+      </div>
+    </section>
+    <div class="quote">
+        “Ziņas nav tikai fakti. Tās ir mūsu laika sajūtas, apziņa un elpa.”
+    </div>
+    <br>
+    <div style="text-align: center;">
+        <h2 id="MusuKomanda">Mūsu komanda</h2>
+    </div>
+    <section>
+        <div class="grid">
+            <div class="card" onclick="openModal('modal1')">
+                <img src="../img/Daba.jpg" alt="Ziņa">
+                <div class="content">
+                    <h2>Sids</h2>
+                    <p><strong>IT projektu vadītājs</strong><br>
+                        Numurs: +371 89012345<br>
+                        E-pasts: itprojekti@itjoma.lv<br>
+                        Soc tīkli: @ITProjekts<br>                        
+                    </p>
+                </div>
+            </div>
+        
+            <div id="modal1" class="modal" onclick="closeModal(event, 'modal1')">
+                <div class="modal-content" onclick="event.stopPropagation();">
+                    <h2>Sids</h2>
+                    <p><strong>IT projektu vadītājs</strong><br>
+                        Numurs: +371 89012345<br>
+                        E-pasts: itprojekti@itjoma.lv<br>
+                        Soc tīkli: @ITProjekts<br>
+                    </p>
+                </div>
+            </div>
+        
+            <div class="card" onclick="openModal('modal2')">
+                <img src="../img/Daba.jpg" alt="Ziņa">
+                <div class="content">
+                    <h2>Tīģeris</h2>
+                    <p><strong>IT Konsultants</strong><br>
+                        Numurs: +371 12345678<br>
+                        E-pasts: konsultants@itjoma.lv<br>
+                        Soc tīkli: @ITkonsultants<br>
+                    </p>
+                </div>
+            </div>
+        
+            <div id="modal2" class="modal" onclick="closeModal(event, 'modal2')">
+                <div class="modal-content" onclick="event.stopPropagation();">
+                    <h2>Tīģeris</h2>
+                    <p><strong>IT Konsultants</strong><br>
+                        Numurs: +371 12345678<br>
+                        E-pasts: konsultants@itjoma.lv<br>
+                        Soc tīkli: @ITkonsultants<br>
+                    </p>
+                </div>
+            </div>
+        
+            <div class="card" onclick="openModal('modal3')">
+                <img src="../img/Daba.jpg" alt="Ziņa">
+                <div class="content">
+                    <h2>Manijs</h2>
+                    <p><strong>Datu analītiķis</strong><br>
+                        Numurs: +371 23456789<br>
+                        E-pasts: datuanalitiks@itjoma.lv<br>
+                        Soc tīkli: @DatuAnalitiks<br>
+                    </p>
+                </div>
+            </div>
+        
+            <div id="modal3" class="modal" onclick="closeModal(event, 'modal3')">
+                <div class="modal-content" onclick="event.stopPropagation();">
+                    <h2>Manijs</h2>
+                    <p><strong>Datu analītiķis</strong><br>
+                        Numurs: +371 23456789<br>
+                        E-pasts: datuanalitiks@itjoma.lv<br>
+                        Soc tīkli: @DatuAnalitiks<br>
+                    </p>
+                </div>
+            </div>
+        
+            <div class="card" onclick="openModal('modal4')">
+                <img src="../img/Daba.jpg" alt="Ziņa">
+                <div class="content">
+                    <h2>Oposumi</h2>
+                    <p><strong>Programmatūras inženieris</strong><br>
+                        Numurs: +371 34567890<br>
+                        E-pasts: prog.inzenieris@itjoma.lv<br>
+                        Soc tīkli: @ProgrammaturaEng<br>
+                    </p>
+                </div>
+            </div>
+        
+            <div id="modal4" class="modal" onclick="closeModal(event, 'modal4')">
+                <div class="modal-content" onclick="event.stopPropagation();">
+                    <h2>Par oposumiem</h2>
+                    <p><strong>Vienmēr strādā kopā</strong><br>
+                        Inžinierē pēc augātkajiem standartiem<br>
+                        Kad ieciklējas, darbs tiks padarīts un nekas viņus neiztraucēs<br>
+                        Saziņai labāk meklēt kādu, kas prot runāt profesionāli un viegli pados ziņu<br>
+                        Ziņķārīgi un vienmēr gatavi iet uz priekšu
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        
+        <section>
+            <div class="grid">
+                <div class="card" onclick="openModal('modal5')">
+                    <img src="../img/Daba.jpg" alt="Ziņa">
+                    <div class="content">
+                        <h2>Ēzelītis</h2>
+                        <p><strong>Mākoņdatošanas speciālists</strong><br>
+                            Numurs: +371 45678901<br>
+                            E-pasts: makonspcialists@itjoma.lv<br>
+                            Soc tīkli: @MakonDat<br>
+                        </p>
+                    </div>
+                </div>
+        
+                <div id="modal5" class="modal" onclick="closeModal(event, 'modal5')">
+                    <div class="modal-content" onclick="event.stopPropagation();">
+                        <h2>Ēzelītis</h2>
+                        <p><strong>Mākoņdatošanas speciālists</strong><br>
+                            Numurs: +371 45678901<br>
+                            E-pasts: makonspcialists@itjoma.lv<br>
+                            Soc tīkli: @MakonDat<br>
+                        </p>
+                    </div>
+                </div>
+        
+                <div class="card" onclick="openModal('modal6')">
+                    <img src="../img/Daba.jpg" alt="Ziņa">
+                    <div class="content">
+                        <h2>Runcis</h2>
+                        <p><strong>Sistēmu administrētājs</strong><br>
+                            Numurs: +371 90123456<br>
+                            E-pasts: sistemasadmin@itjoma.lv<br>
+                            Soc tīkli: @SystemAdmin<br>
+                        </p>
+                    </div>
+                </div>
+        
+                <div id="modal6" class="modal" onclick="closeModal(event, 'modal6')">
+                    <div class="modal-content" onclick="event.stopPropagation();">
+                        <h2>Runcis</h2>
+                        <p><strong>Sistēmu administrētājs</strong><br>
+                            Numurs: +371 90123456<br>
+                            E-pasts: sistemasadmin@itjoma.lv<br>
+                            Soc tīkli: @SystemAdmin<br>
+                        </p>
+                    </div>
+                </div>
+        
+                <div class="card" onclick="openModal('modal7')">
+                    <img src="../img/Daba.jpg" alt="Ziņa">
+                    <div class="content">
+                        <h2>Šreks</h2>
+                        <p><strong>Kiberdrošības eksperts</strong><br>
+                            Numurs: +371 56789012<br>
+                            E-pasts: kiberdrosiba@itjoma.lv<br>
+                            Soc tīkli: @CyberExpert<br>
+                        </p>
+                    </div>
+                </div>
+        
+                <div id="modal7" class="modal" onclick="closeModal(event, 'modal7')">
+                    <div class="modal-content" onclick="event.stopPropagation();">
+                        <h2>Šreks</h2>
+                        <p><strong>Kiberdrošības eksperts</strong><br>
+                            Numurs: +371 56789012<br>
+                            E-pasts: kiberdrosiba@itjoma.lv<br>
+                            Soc tīkli: @CyberExpert<br>
+                        </p>
+                    </div>
+                </div>
+        
+                <div class="card" onclick="openModal('modal8')">
+                    <img src="../img/Daba.jpg" alt="Ziņa">
+                    <div class="content">
+                        <h2>Aklās peles</h2>
+                        <p><strong>Web izstrādātājs</strong><br>
+                            Numurs: +371 67890123<br>
+                            E-pasts: webizstrad@itjoma.lv<br>
+                            Soc tīkli: @WebDevExpert<br>
+                        </p>
+                    </div>
+                </div>
+        
+                <div id="modal8" class="modal" onclick="closeModal(event, 'modal8')">
+                    <div class="modal-content" onclick="event.stopPropagation();">
+                        <h2>Aklās peles</h2>
+                        <p><strong>Web izstrādātājs</strong><br>
+                            Numurs: +371 67890123<br>
+                            E-pasts: webizstrad@itjoma.lv<br>
+                            Soc tīkli: @WebDevExpert<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <br>
+
+    <button class="TPTop" id="scrollTopButton">
+        <svg class="svgIcon" viewBox="0 0 384 512">
+          <path
+            d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z">
+          </path>
+        </svg>
+      </button>
+      <footer>
+        <p>&copy; 2025 FREDI Ziņas</p>
+      </footer>
+      <script src="../java.js"></script>
+      </body>
+      </html>
+      

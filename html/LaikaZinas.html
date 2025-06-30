@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laika Ziņas -FREDI Ziņas</title>
+  <link rel="stylesheet" href="../css/LaikaZinas.css">
+  <link rel="stylesheet" href="../css/Navigaacija.css">
+  <link rel="stylesheet" href="../css/TPTop.css">
+</head>
+<body>
+<!-- NAVIGĀCIJA -->
+<input type="checkbox" id="nav-toggle" hidden>
+<label for="nav-toggle" class="nav-toggle-label">
+  <span></span><span></span><span></span>
+</label>
+
+<nav class="responsive-nav">
+  <div class="nav-left">
+    <a href="../html/Main.html" class="logo">Fredi</a>
+  </div>
+
+  <div class="nav-center">
+    <a href="../html/Main.html"><button>Home</button></a>
+
+    <!-- DROPDOWN SĀKUMS -->
+    <div class="dropdown">
+      <button class="dropbtn active">Aktualitātes</button>
+      <div class="dropdown-content">
+        <a href="Aktualitates.html">Visas aktualitātes</a>
+        <a href="LaikaZinas.html">Laika ziņas</a>
+      </div>
+    </div>
+    <!-- DROPDOWN BEIGAS -->
+
+    <a href="404.html"><button>Tematiskie raksti</button></a>
+
+    <!-- DROPDOWN SĀKUMS -->
+    <div class="dropdown">
+      <button class="dropbtn">Kultūra un māksla</button>
+      <div class="dropdown-content">
+        <a href="Kultura.html">Viss par Kultūru un mākslu</a>
+        <a href="DziesmuSvetki_Raksts.html">Dziesmu un deju svētki</a>
+      </div>
+    </div>
+    <!-- DROPDOWN BEIGAS -->
+
+    <a href="ParMums.html"><button>Par Mums</button></a>
+  </div>
+
+  <div class="nav-right">
+    <a href="Profils.html"><button>Profils</button></a>
+  </div>
+</nav>
+<!-- NAVIGĀCIJA -->
+
+<section class="weather-hero">
+  <div class="weather-head">
+    <h1>Laika Ziņas</h1>
+    <input id="citySearch" type="text" placeholder="Meklēt pilsētu..." autocomplete="off">
+  </div>
+  <div class="forecast-row">
+    <span>Šodien • Otrdiena, 11. jūnijs</span>
+    <span>|</span>
+    <span>Pēdējā atjaunošana: 14:05</span>
+  </div>
+  <div class="weather-note">
+    “Bez stresa, bez strasa, ES TEICU BEZ STRESA!<br>
+    Laiki mainās, bet latvietis tiek līdzi. ”
+  </div>
+  <div class="weather-list" id="weatherList">
+    <div class="weather-city-card" data-city="Rīga">
+      <div class="weather-icon">🌦️</div>
+      <div class="weather-city">Rīga</div>
+      <div class="weather-temp">+18°C</div>
+      <div class="weather-feels">Sajūtu temps: +16°C</div>
+      <div class="weather-details">Vējš: 6 m/s<br>Mitrums: 63%</div>
+      <div class="weather-desc">Mainīgs mākoņu daudzums, iespējams neliels lietus</div>
+    </div>
+    <div class="weather-city-card" data-city="Daugavpils">
+      <div class="weather-icon">🌧️</div>
+      <div class="weather-city">Daugavpils</div>
+      <div class="weather-temp">+15°C</div>
+      <div class="weather-feels">Sajūtu temps: +14°C</div>
+      <div class="weather-details">Vējš: 5 m/s<br>Mitrums: 78%</div>
+      <div class="weather-desc">Apmācies, ilgstošs lietus. Siltāks vakarpusē</div>
+    </div>
+    <div class="weather-city-card" data-city="Liepāja">
+      <div class="weather-icon">⛅</div>
+      <div class="weather-city">Liepāja</div>
+      <div class="weather-temp">+17°C</div>
+      <div class="weather-feels">Sajūtu temps: +15°C</div>
+      <div class="weather-details">Vējš: 8 m/s<br>Mitrums: 68%</div>
+      <div class="weather-desc">Saulains ar mākoņiem, spirgts jūras vējš</div>
+    </div>
+    <div class="weather-city-card" data-city="Valmiera">
+      <div class="weather-icon">🌤️</div>
+      <div class="weather-city">Valmiera</div>
+      <div class="weather-temp">+19°C</div>
+      <div class="weather-feels">Sajūtu temps: +18°C</div>
+      <div class="weather-details">Vējš: 2 m/s<br>Mitrums: 56%</div>
+      <div class="weather-desc">Pārsvarā saulains, patīkama temperatūra</div>
+    </div>
+    <div class="weather-city-card" data-city="Jelgava">
+      <div class="weather-icon">🌫️</div>
+      <div class="weather-city">Jelgava</div>
+      <div class="weather-temp">+14°C</div>
+      <div class="weather-feels">Sajūtu temps: +13°C</div>
+      <div class="weather-details">Vējš: 3 m/s<br>Mitrums: 81%</div>
+      <div class="weather-desc">Rīts miglains, pēcpusdienā kļūs skaidrāks</div>
+    </div>
+    <div class="weather-city-card" data-city="Ventspils">
+      <div class="weather-icon">🌦️</div>
+      <div class="weather-city">Ventspils</div>
+      <div class="weather-temp">+16°C</div>
+      <div class="weather-feels">Sajūtu temps: +15°C</div>
+      <div class="weather-details">Vējš: 9 m/s<br>Mitrums: 74%</div>
+      <div class="weather-desc">Neliels lietus, brīžiem uzspīd saule</div>
+    </div>
+    <div class="weather-city-card" data-city="Cēsis">
+      <div class="weather-icon">☀️</div>
+      <div class="weather-city">Cēsis</div>
+      <div class="weather-temp">+20°C</div>
+      <div class="weather-feels">Sajūtu temps: +19°C</div>
+      <div class="weather-details">Vējš: 1 m/s<br>Mitrums: 49%</div>
+      <div class="weather-desc">Silts, saulains, ideāli pastaigām</div>
+    </div>
+    <div class="weather-city-card" data-city="Jēkabpils">
+      <div class="weather-icon">⛈️</div>
+      <div class="weather-city">Jēkabpils</div>
+      <div class="weather-temp">+13°C</div>
+      <div class="weather-feels">Sajūtu temps: +12°C</div>
+      <div class="weather-details">Vējš: 6 m/s<br>Mitrums: 89%</div>
+      <div class="weather-desc">Pēcpusdienā stipra lietusgāze ar pērkonu</div>
+    </div>
+    <div class="weather-city-card" data-city="Jūrmala">
+        <div class="weather-icon">🌊</div>
+        <div class="weather-city">Jūrmala</div>
+        <div class="weather-temp">+17°C</div>
+        <div class="weather-feels">Sajūtu temps: +16°C</div>
+        <div class="weather-details">Vējš: 7 m/s<br>Mitrums: 70%</div>
+        <div class="weather-desc">Vēsāks pie jūras, saulaini ar brīzi</div>
+      </div>
+      <div class="weather-city-card" data-city="Salaspils">
+        <div class="weather-icon">🌥️</div>
+        <div class="weather-city">Salaspils</div>
+        <div class="weather-temp">+16°C</div>
+        <div class="weather-feels">Sajūtu temps: +15°C</div>
+        <div class="weather-details">Vējš: 3 m/s<br>Mitrums: 60%</div>
+        <div class="weather-desc">Mainīgi mākoņi, bez nokrišņiem</div>
+      </div>
+      <div class="weather-city-card" data-city="Olaine">
+        <div class="weather-icon">☁️</div>
+        <div class="weather-city">Olaine</div>
+        <div class="weather-temp">+15°C</div>
+        <div class="weather-feels">Sajūtu temps: +14°C</div>
+        <div class="weather-details">Vējš: 2 m/s<br>Mitrums: 77%</div>
+        <div class="weather-desc">Apmācies, iespējama īslaicīga migla</div>
+      </div>
+      <div class="weather-city-card" data-city="Kuldīga">
+        <div class="weather-icon">🌦️</div>
+        <div class="weather-city">Kuldīga</div>
+        <div class="weather-temp">+18°C</div>
+        <div class="weather-feels">Sajūtu temps: +17°C</div>
+        <div class="weather-details">Vējš: 4 m/s<br>Mitrums: 62%</div>
+        <div class="weather-desc">Pārsvarā saulains, neliels lietus iespējams</div>
+      </div>
+      <div class="weather-city-card" data-city="Bauska">
+        <div class="weather-icon">🌧️</div>
+        <div class="weather-city">Bauska</div>
+        <div class="weather-temp">+14°C</div>
+        <div class="weather-feels">Sajūtu temps: +13°C</div>
+        <div class="weather-details">Vējš: 6 m/s<br>Mitrums: 82%</div>
+        <div class="weather-desc">Ilgstošs lietus, mitrs laiks</div>
+      </div>
+      <div class="weather-city-card" data-city="Alūksne">
+        <div class="weather-icon">⛅</div>
+        <div class="weather-city">Alūksne</div>
+        <div class="weather-temp">+13°C</div>
+        <div class="weather-feels">Sajūtu temps: +13°C</div>
+        <div class="weather-details">Vējš: 2 m/s<br>Mitrums: 67%</div>
+        <div class="weather-desc">Daļēji saulains, vēss rīts</div>
+      </div>
+      <div class="weather-city-card" data-city="Talsi">
+        <div class="weather-icon">☀️</div>
+        <div class="weather-city">Talsi</div>
+        <div class="weather-temp">+19°C</div>
+        <div class="weather-feels">Sajūtu temps: +19°C</div>
+        <div class="weather-details">Vējš: 1 m/s<br>Mitrums: 55%</div>
+        <div class="weather-desc">Silts un skaidrs, ideāli pastaigām</div>
+      </div>
+      <div class="weather-city-card" data-city="Smiltene">
+        <div class="weather-icon">🌦️</div>
+        <div class="weather-city">Smiltene</div>
+        <div class="weather-temp">+15°C</div>
+        <div class="weather-feels">Sajūtu temps: +14°C</div>
+        <div class="weather-details">Vējš: 3 m/s<br>Mitrums: 65%</div>
+        <div class="weather-desc">Pārsvarā mākoņains, iespējams īslaicīgs lietus</div>
+      </div>
+      
+  </div>
+</section>
+
+<!-- MODALS -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <div class="modal-summary">
+      <div class="icon" id="modal-icon">🌦️</div>
+      <div class="city" id="modal-city">Rīga</div>
+      <div class="temp" id="modal-temp">+18°C</div>
+      <div class="desc" id="modal-desc">Mainīgs mākoņu daudzums, iespējams neliels lietus</div>
+      <div class="details" id="modal-details">Vējš: 6 m/s<br>Mitrums: 63%</div>
+    </div>
+    <div style="flex: 1; position: relative;">
+      <button class="modal-close" title="Aizvērt">&times;</button>
+      <table class="modal-table" id="modal-forecast-table">
+        <!-- ... JS ieliek stundas prognozi šeit ... -->
+      </table>
+    </div>
+  </div>
+</div>
+
+<button class="TPTop" id="scrollTopButton">
+  <svg class="svgIcon" viewBox="0 0 384 512">
+    <path
+      d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z">
+    </path>
+  </svg>
+</button>
+<footer>
+  <p>&copy; 2025 FREDI Ziņas</p>
+</footer>
+<script>
+  // Fiktīvi dati — vari papildināt!
+  const forecasts = {
+    "Rīga": [
+      ["08:00", "+14°C", "🌧️", "Lietus"],
+      ["10:00", "+15°C", "🌦️", "Mainīgs mākoņu daudzums"],
+      ["12:00", "+17°C", "🌦️", "Neliels lietus"],
+      ["14:00", "+18°C", "⛅", "Saulaini brīži"],
+      ["16:00", "+19°C", "⛅", "Mazāk mākoņu"],
+      ["18:00", "+18°C", "🌤️", "Saulains, silts"]
+    ],
+    "Daugavpils": [
+      ["08:00", "+12°C", "🌧️", "Lietus"],
+      ["10:00", "+13°C", "🌧️", "Ilgstošs lietus"],
+      ["12:00", "+14°C", "🌧️", "Lietus pāriet"],
+      ["14:00", "+15°C", "🌦️", "Viegli mākoņi"],
+      ["16:00", "+16°C", "⛅", "Saulaini brīži"],
+      ["18:00", "+15°C", "⛅", "Siltāks vakars"]
+    ],
+    "Liepāja": [
+      ["08:00", "+14°C", "⛅", "Daļēji saulains, stiprs vējš"],
+      ["10:00", "+15°C", "⛅", "Vējš līdz 10 m/s"],
+      ["12:00", "+16°C", "☀️", "Saule"],
+      ["14:00", "+17°C", "☀️", "Silts"],
+      ["16:00", "+17°C", "☀️", "Ideāli pastaigai"],
+      ["18:00", "+15°C", "⛅", "Saule ar mākoņiem"]
+    ],
+    "Valmiera": [
+      ["08:00", "+16°C", "🌤️", "Saulains, dzestrais rīts"],
+      ["10:00", "+18°C", "☀️", "Saule"],
+      ["12:00", "+19°C", "☀️", "Silts"],
+      ["14:00", "+19°C", "🌤️", "Mākoņi un saule"],
+      ["16:00", "+18°C", "⛅", "Viegli mākoņains"],
+      ["18:00", "+17°C", "⛅", "Vakara dzestrums"]
+    ],
+    "Jelgava": [
+      ["08:00", "+13°C", "🌫️", "Rīta migla"],
+      ["10:00", "+13°C", "🌫️", "Migla, vēss"],
+      ["12:00", "+14°C", "⛅", "Mākoņains"],
+      ["14:00", "+15°C", "⛅", "Sāk skaidroties"],
+      ["16:00", "+15°C", "☀️", "Saulains"],
+      ["18:00", "+14°C", "☀️", "Vakarā vēss"]
+    ],
+    "Ventspils": [
+      ["08:00", "+13°C", "🌦️", "Neliels lietus, vējš"],
+      ["10:00", "+15°C", "🌦️", "Mākoņains ar brīžiem lietu"],
+      ["12:00", "+16°C", "⛅", "Mazāk mākoņu"],
+      ["14:00", "+16°C", "☀️", "Saule un vējš"],
+      ["16:00", "+16°C", "☀️", "Siltāks"],
+      ["18:00", "+15°C", "⛅", "Vakara spirgts gaiss"]
+    ],
+    "Cēsis": [
+      ["08:00", "+16°C", "☀️", "Saulains"],
+      ["10:00", "+18°C", "☀️", "Silts"],
+      ["12:00", "+20°C", "☀️", "Pīķis dienā"],
+      ["14:00", "+20°C", "☀️", "Silts, skaidrs"],
+      ["16:00", "+19°C", "🌤️", "Viegli mākoņi"],
+      ["18:00", "+18°C", "⛅", "Vakara atslodze"]
+    ],
+    "Jēkabpils": [
+      ["08:00", "+12°C", "🌧️", "Lietus, stiprs vējš"],
+      ["10:00", "+13°C", "🌧️", "Lietus, vējš 8 m/s"],
+      ["12:00", "+13°C", "⛈️", "Lietus ar pērkonu"],
+      ["14:00", "+13°C", "⛈️", "Spēcīgas lietusgāzes"],
+      ["16:00", "+14°C", "🌦️", "Lietus mitējas"],
+      ["18:00", "+14°C", "⛅", "Mākoņains"]
+    ],
+    "Jūrmala": [
+  ["08:00", "+14°C", "☁️", "Mākoņains rīts"],
+  ["10:00", "+15°C", "🌊", "Vējš no jūras"],
+  ["12:00", "+16°C", "⛅", "Saule ar mākoņiem"],
+  ["14:00", "+17°C", "⛅", "Silts, vējains"],
+  ["16:00", "+17°C", "🌊", "Vēsāks pie jūras"],
+  ["18:00", "+16°C", "🌤️", "Vakars ar sauli"]
+],
+"Salaspils": [
+  ["08:00", "+12°C", "☁️", "Apmācies"],
+  ["10:00", "+13°C", "🌥️", "Mainīgi mākoņi"],
+  ["12:00", "+14°C", "⛅", "Daļēji saulains"],
+  ["14:00", "+16°C", "🌥️", "Bez nokrišņiem"],
+  ["16:00", "+16°C", "⛅", "Saulaini brīži"],
+  ["18:00", "+15°C", "☀️", "Skaidrs"]
+],
+"Olaine": [
+  ["08:00", "+11°C", "🌫️", "Migla"],
+  ["10:00", "+13°C", "☁️", "Apmācies"],
+  ["12:00", "+14°C", "⛅", "Viegli mākoņains"],
+  ["14:00", "+15°C", "⛅", "Saulains brīdis"],
+  ["16:00", "+14°C", "🌥️", "Neliela migla"],
+  ["18:00", "+14°C", "☁️", "Apmācies vakars"]
+],
+"Kuldīga": [
+  ["08:00", "+15°C", "☀️", "Saulains"],
+  ["10:00", "+16°C", "⛅", "Saulains ar mākoņiem"],
+  ["12:00", "+17°C", "🌦️", "Neliels lietus iespējams"],
+  ["14:00", "+18°C", "🌦️", "Saule un lietus"],
+  ["16:00", "+17°C", "☀️", "Atkal saulains"],
+  ["18:00", "+16°C", "⛅", "Vakara mākoņi"]
+],
+"Bauska": [
+  ["08:00", "+10°C", "🌧️", "Lietus no rīta"],
+  ["10:00", "+11°C", "🌧️", "Stiprs lietus"],
+  ["12:00", "+13°C", "🌧️", "Ilgstošs lietus"],
+  ["14:00", "+14°C", "🌧️", "Neliels lietus"],
+  ["16:00", "+13°C", "☁️", "Mitrs, bez lietus"],
+  ["18:00", "+12°C", "🌧️", "Lietus atgriežas"]
+],
+"Alūksne": [
+  ["08:00", "+8°C", "⛅", "Vēsums, saulaini"],
+  ["10:00", "+10°C", "⛅", "Vēsums ar sauli"],
+  ["12:00", "+12°C", "☀️", "Saulains"],
+  ["14:00", "+13°C", "☀️", "Vēl aizvien saulains"],
+  ["16:00", "+13°C", "⛅", "Nelieli mākoņi"],
+  ["18:00", "+12°C", "☁️", "Vēsāks vakars"]
+],
+"Talsi": [
+  ["08:00", "+14°C", "☀️", "Saulains rīts"],
+  ["10:00", "+16°C", "☀️", "Silts ar sauli"],
+  ["12:00", "+18°C", "☀️", "Karstākais dienas brīdis"],
+  ["14:00", "+19°C", "☀️", "Lieliska pastaiga"],
+  ["16:00", "+19°C", "⛅", "Daži mākoņi"],
+  ["18:00", "+18°C", "⛅", "Saulains vakars"]
+],
+"Smiltene": [
+  ["08:00", "+12°C", "🌥️", "Mākoņains"],
+  ["10:00", "+13°C", "🌦️", "Īslaicīgs lietus"],
+  ["12:00", "+14°C", "⛅", "Pārsvarā sauss"],
+  ["14:00", "+15°C", "⛅", "Daļēji saulains"],
+  ["16:00", "+15°C", "🌧️", "Neliels lietus"],
+  ["18:00", "+14°C", "⛅", "Sauss vakars"]
+]
+  };
+document.addEventListener('DOMContentLoaded', function() {
+  // MODAL atvēršana
+  document.querySelectorAll('.weather-city-card').forEach(function(card){
+    card.addEventListener('click', function(){
+      const city = card.getAttribute('data-city');
+      document.getElementById('modal-city').innerText = city;
+      document.getElementById('modal-icon').innerText = card.querySelector('.weather-icon').innerText;
+      document.getElementById('modal-temp').innerText = card.querySelector('.weather-temp').innerText;
+      document.getElementById('modal-desc').innerText = card.querySelector('.weather-desc').innerText;
+      document.getElementById('modal-details').innerHTML = card.querySelector('.weather-details').innerHTML;
+      // Stundu prognoze
+      const table = document.getElementById('modal-forecast-table');
+      table.innerHTML = '<tr><th>Laiks</th><th>Temp.</th><th></th><th>Prognoze</th></tr>';
+      (forecasts[city]||[]).forEach(function(hour){
+        const row = document.createElement('tr');
+        row.innerHTML = `<td>${hour[0]}</td><td>${hour[1]}</td><td>${hour[2]}</td><td>${hour[3]}</td>`;
+        table.appendChild(row);
+      });
+      document.getElementById('modal').classList.add('active');
+    });
+  });
+  // MODAL aizvēršana
+  document.querySelector('.modal-close').onclick = function() {
+    document.getElementById('modal').classList.remove('active');
+  };
+  document.getElementById('modal').onclick = function(e) {
+    if (e.target === this) this.classList.remove('active');
+  };
+  // Meklētājs
+  document.getElementById('citySearch').addEventListener('input', function(){
+    const search = this.value.trim().toLowerCase();
+    document.querySelectorAll('.weather-city-card').forEach(card => {
+      const city = card.getAttribute('data-city').toLowerCase();
+      card.style.display = (city.includes(search) || search === "") ? "" : "none";
+    });
+  });
+});
+</script>
+</body>
+</html>

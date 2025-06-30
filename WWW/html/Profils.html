@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <title>Profils -FREDI Ziņas</title>
+  <link rel="stylesheet" href="../css/Profils.css">
+  <link rel="stylesheet" href="../css/Navigaacija.css">
+  <link rel="stylesheet" href="../css/TPTop.css">
+</head>
+<body>
+
+<!-- NAVIGĀCIJA -->
+<input type="checkbox" id="nav-toggle" hidden>
+<label for="nav-toggle" class="nav-toggle-label">
+  <span></span><span></span><span></span>
+</label>
+
+<nav class="responsive-nav">
+  <div class="nav-left">
+    <a href="../html/Main.html" class="logo">Fredi</a>
+  </div>
+
+  <div class="nav-center">
+    <a href="../html/Main.html"><button>Home</button></a>
+
+    <!-- DROPDOWN SĀKUMS -->
+    <div class="dropdown">
+      <button class="dropbtn">Aktualitātes</button>
+      <div class="dropdown-content">
+        <a href="Aktualitates.html">Visas aktualitātes</a>
+        <a href="LaikaZinas.html">Laika ziņas</a>
+      </div>
+    </div>
+    <!-- DROPDOWN BEIGAS -->
+
+    <a href="404.html"><button>Tematiskie raksti</button></a>
+
+    <!-- DROPDOWN SĀKUMS -->
+    <div class="dropdown">
+      <button class="dropbtn">Kultūra un māksla</button>
+      <div class="dropdown-content">
+        <a href="Kultura.html">Viss par Kultūru un mākslu</a>
+        <a href="DziesmuSvetki_Raksts.html">Dziesmu un deju svētki</a>
+      </div>
+    </div>
+    <!-- DROPDOWN BEIGAS -->
+
+    <a href="ParMums.html"><button>Par Mums</button></a>
+  </div>
+
+  <div class="nav-right">
+    <a href="Profils.html"><button class="active">Profils</button></a>
+  </div>
+</nav>
+<!-- NAVIGĀCIJA -->
+
+
+<!-- SATURS -->
+<section class="settings-wrapper">
+  <aside class="sidebar">
+    <h3>Profila izvēlne</h3>
+    <ul>
+      <li><button class="tab active" data-tab="activity">Profila aktivitāte</button></li>
+      <li><button class="tab" data-tab="saved-news">Saglabātie raksti</button></li>
+      <li><button class="tab" data-tab="read-articles">Vēsture</button></li>
+    </ul>
+  </aside>
+
+  <section class="content">
+    <!-- AKTĪVAIS -->
+    <div class="tab-content active" id="activity">
+      <h2>Profila aktivitāte</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="content">
+            <h2>Jaunākais komentārs</h2>
+            <p>Izteici savu viedokli par ziņu - "Kā Covid-19 ietekmē globālo ekonomiku".</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h2>Ziņas saglabāšana</h2>
+            <p>Tu esi saglabājis ziņu par "Latvijas vēlēšanu rezultātiem".</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h2>Jauns balsojums</h2>
+            <p>Tu piedalījies balsojumā par "Inovācijas tehnoloģijās".</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SAGLABĀTIE -->
+    <div class="tab-content" id="saved-news">
+      <h2>Saglabātie raksti</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="content">
+            <h2>Latvijas vēlēšanu rezultāti</h2>
+            <p>Pārskats par jaunākajām vēlēšanām Latvijā un to sekām.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VĒSTURE -->
+    <div class="tab-content" id="read-articles">
+      <h2>Lasīts šodien</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="content">
+            <h2>5G ietekme uz sabiedrību</h2>
+            <p>Vai ātrāks internets padarīs mūs produktīvākus vai atkarīgākus?</p>
+          </div>
+        </div>
+      </div>
+      <h2>Lasīs pēdējo nedēļu</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="content">
+            <h2>Jaunākais komentārs</h2>
+            <p>Izteici savu viedokli par ziņu - "Kā Covid-19 ietekmē globālo ekonomiku".</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h2>Ziņas saglabāšana</h2>
+            <p>Tu esi saglabājis ziņu par "Latvijas vēlēšanu rezultātiem".</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h2>Jauns balsojums</h2>
+            <p>Tu piedalījies balsojumā par "Inovācijas tehnoloģijās".</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <div class="content">
+            <h2>Jaunākais komentārs</h2>
+            <p>Izteici savu viedokli par ziņu - "Kā Covid-19 ietekmē globālo ekonomiku".</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h2>Ziņas saglabāšana</h2>
+            <p>Tu esi saglabājis ziņu par "Latvijas vēlēšanu rezultātiem".</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h2>Jauns balsojums</h2>
+            <p>Tu piedalījies balsojumā par "Inovācijas tehnoloģijās".</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <div class="content">
+            <h2>Jaunākais komentārs</h2>
+            <p>Izteici savu viedokli par ziņu - "Kā Covid-19 ietekmē globālo ekonomiku".</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h2>Ziņas saglabāšana</h2>
+            <p>Tu esi saglabājis ziņu par "Latvijas vēlēšanu rezultātiem".</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h2>Jauns balsojums</h2>
+            <p>Tu piedalījies balsojumā par "Inovācijas tehnoloģijās".</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <div class="content">
+            <h2>Jaunākais komentārs</h2>
+            <p>Izteici savu viedokli par ziņu - "Kā Covid-19 ietekmē globālo ekonomiku".</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h2>Ziņas saglabāšana</h2>
+            <p>Tu esi saglabājis ziņu par "Latvijas vēlēšanu rezultātiem".</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h2>Jauns balsojums</h2>
+            <p>Tu piedalījies balsojumā par "Inovācijas tehnoloģijās".</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <div class="content">
+            <h2>Jaunākais komentārs</h2>
+            <p>Izteici savu viedokli par ziņu - "Kā Covid-19 ietekmē globālo ekonomiku".</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h2>Ziņas saglabāšana</h2>
+            <p>Tu esi saglabājis ziņu par "Latvijas vēlēšanu rezultātiem".</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h2>Jauns balsojums</h2>
+            <p>Tu piedalījies balsojumā par "Inovācijas tehnoloģijās".</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2025 ZiņuPortāls</p>
+</footer>
+
+<!-- JS -->
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const contents = document.querySelectorAll('.tab-content');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      contents.forEach(c => c.classList.remove('active'));
+
+      tab.classList.add('active');
+      document.getElementById(tab.dataset.tab).classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>

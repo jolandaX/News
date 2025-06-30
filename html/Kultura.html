@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kultūra un māksla — FREDI Ziņas</title>
+  <link rel="stylesheet" href="../css/Kultura.css">
+  <link rel="stylesheet" href="../css/Navigaacija.css">
+  <link rel="stylesheet" href="../css/TPTop.css">
+</head>
+<body>
+
+<!-- NAVIGĀCIJA -->
+<input type="checkbox" id="nav-toggle" hidden>
+<label for="nav-toggle" class="nav-toggle-label">
+  <span></span><span></span><span></span>
+</label>
+
+<nav class="responsive-nav">
+  <div class="nav-left">
+    <a href="../html/Main.html" class="logo">Fredi</a>
+  </div>
+
+  <div class="nav-center">
+    <a href="../html/Main.html"><button>Home</button></a>
+
+    <!-- DROPDOWN SĀKUMS -->
+    <div class="dropdown">
+      <button class="dropbtn">Aktualitātes</button>
+      <div class="dropdown-content">
+        <a href="Aktualitates.html">Visas aktualitātes</a>
+        <a href="LaikaZinas.html">Laika ziņas</a>
+      </div>
+    </div>
+    <!-- DROPDOWN BEIGAS -->
+
+    <a href="404.html"><button>Tematiskie raksti</button></a>
+
+    <!-- DROPDOWN SĀKUMS -->
+    <div class="dropdown">
+      <button class="dropbtn active">Kultūra un māksla</button>
+      <div class="dropdown-content">
+        <a href="Kultura.html">Viss par Kultūru un mākslu</a>
+        <a href="DziesmuSvetki_Raksts.html">Dziesmu un deju svētki</a>
+      </div>
+    </div>
+    <!-- DROPDOWN BEIGAS -->
+
+    <a href="ParMums.html"><button>Par Mums</button></a>
+  </div>
+
+  <div class="nav-right">
+    <a href="Profils.html"><button>Profils</button></a>
+  </div>
+</nav>
+<!-- NAVIGĀCIJA -->
+  
+<header>
+  <h1>Kultūra un māksla</h1>
+</header>
+
+<div class="quote">“Kultūra ir sabiedrības sirds, un māksla — tās balss.”</div>
+
+<section class="main">
+  <aside class="sidebar">
+    <h3>Kategorijas</h3>
+    <ul>
+      <li><a href="Aktualitates.html">Aktualitātes</a></li>
+      <li><a href="404.html" class="active">Kultūra un māksla</a></li>
+    </ul>
+    <br><br>
+    <div class="search-block">
+        <h3 style="margin-bottom: 10px; color: #8f214f;">Meklēt rakstu lapā</h3>
+        <input type="text" id="searchInput" placeholder="Raksta nosaukums..." class="search-input">
+        <div id="searchResults" class="search-results"></div>
+      </div>
+        </aside>
+
+  <section class="grid" id="articleList">
+    <div class="card" data-title="Teātris Rīgā atdzimst">
+      <a href="404.html" class="card-link"></a>
+      <img src="../img/maksla.jpg" alt="Teātris">
+      <div class="content">
+        <h2>Teātris Rīgā atdzimst</h2>
+        <p>Jaunas izrādes, jauni režisori, jauns vilnis. Kas notiek teātra pasaulē šobrīd?</p>
+      </div>
+    </div>
+    <div class="card" data-title="Latvijas mākslinieki Berlīnē">
+      <a href="404.html" class="card-link"></a>
+      <img src="../img/maksla.jpg" alt="Māksla">
+      <div class="content">
+        <h2>Latvijas mākslinieki Berlīnē</h2>
+        <p>Izstāde ar Latvijas autoru darbiem guvusi ievērību starptautiskā mākslas forumā.</p>
+      </div>
+    </div>
+    <div class="card" data-title="Kā dzima Dziesmu svētki">
+        <a href="DziesmuSvetki_Raksts.html" class="card-link"></a>
+        <img src="../img/maksla.jpg" alt="Dziesmu svētki">
+        <div class="content">
+          <h2>Kā dzima Dziesmu svētki</h2>
+          <p>Ceļojums laikā uz 1873. gadu – kā tapa Latvijas lielākais kultūras notikums.</p>
+        </div>
+    </div>
+      
+    <!-- Pievieno vēl rakstus šeit -->
+  </section>
+</section>
+
+<button class="TPTop" id="scrollTopButton">
+    <svg class="svgIcon" viewBox="0 0 384 512">
+      <path
+        d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z">
+      </path>
+    </svg>
+  </button>
+
+  
+<script>
+  // MEKLĒTĀJS
+  document.getElementById("searchInput").addEventListener("input", function () {
+    const value = this.value.trim().toLowerCase();
+    document.querySelectorAll("#articleList .card").forEach(card => {
+      const title = card.dataset.title.toLowerCase();
+      card.style.display = title.includes(value) ? "block" : "none";
+    });
+  });
+</script>
+
+<footer>
+  <p>&copy; 2025 FREDI Ziņas</p>
+</footer>
+</body>
+</html>
